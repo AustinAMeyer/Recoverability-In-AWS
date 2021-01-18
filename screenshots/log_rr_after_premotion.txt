@@ -1,0 +1,40 @@
+[ec2-user@ip-10-2-10-74 ~]$ mysql mysql -h udacity2.c8wn5dck86ad.us-west-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.20 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [mysql]> USE books;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [books]> INSERT INTO authors (id,name,email) VALUES(6,"oTom","otom@yahoo.com");
+Query OK, 1 row affected (0.00 sec)
+
+MySQL [books]> INSERT INTO authors (id,name,email) VALUES(7,"oTom","otom@yahoo.com");
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [books]> SELECT * FROM authors;
++------+-------+----------------+
+| id   | name  | email          |
++------+-------+----------------+
+|    1 | Vivek | xuz@abc.com    |
+|    2 | Priya | p@gmail.com    |
+|    3 | Tom   | tom@yahoo.com  |
+|    4 | oTom  | otom@yahoo.com |
+|    5 | oTom  | otom@yahoo.com |
+|    6 | oTom  | otom@yahoo.com |
+|    6 | oTom  | otom@yahoo.com |
+|    7 | oTom  | otom@yahoo.com |
++------+-------+----------------+
+8 rows in set (0.00 sec)
+
+MySQL [books]> 

@@ -1,0 +1,46 @@
+[ec2-user@ip-10-1-11-167 ~]$ mysql -h udacity.c92l4ujfyy4e.us-west-2.rds.amazonaws.com -P 3306 -u admin -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 28
+Server version: 8.0.20 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> CREATE DATABASE books;
+Query OK, 1 row affected (0.02 sec)
+
+MySQL [(none)]> USE books;
+Database changed
+MySQL [books]> CREATE TABLE authors (id INT, name VARCHAR(20), email VARCHAR(20));
+Query OK, 0 rows affected (0.06 sec)
+
+MySQL [books]> SHOW TABLES;
++-----------------+
+| Tables_in_books |
++-----------------+
+| authors         |
++-----------------+
+1 row in set (0.00 sec)
+
+MySQL [books]> INSERT INTO authors (id,name,email) VALUES(1,"Vivek","xuz@abc.com");
+Query OK, 1 row affected (0.05 sec)
+
+MySQL [books]> INSERT INTO authors (id,name,email) VALUES(2,"Priya","p@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+MySQL [books]> INSERT INTO authors (id,name,email) VALUES(3,"Tom","tom@yahoo.com");
+Query OK, 1 row affected (0.02 sec)
+
+MySQL [books]> SELECT * FROM authors;
++------+-------+---------------+
+| id   | name  | email         |
++------+-------+---------------+
+|    1 | Vivek | xuz@abc.com   |
+|    2 | Priya | p@gmail.com   |
+|    3 | Tom   | tom@yahoo.com |
++------+-------+---------------+
+3 rows in set (0.00 sec)
+
+MySQL [books]> 

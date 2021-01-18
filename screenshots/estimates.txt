@@ -1,0 +1,18 @@
+Minimum RTO for a single AZ outage
+I would say in this case it shouldn't take more than 5 minutes because we have everything built to work in multiple availability zones.
+
+Minimum RTO for a single region outage
+In this case I would expect it to take longer. My total expectation would be around 48 minutes based on my evaluation below:
+
+Problem happens
+Takes 2 minutes to trigger an alert
+Takes 1 minute to send to all staff
+Takes 15 minutes for staff to get out of bed to deal with issue
+Takes 15 minutes for staff to diagnose the issue
+Takes 15 minutes to remediate the issue
+
+Minimum RPO for a single AZ outage
+I would say in this case it shouldn't take more than 5 minutes because we have everything built to work in multiple availability zones.
+
+Minimum RPO for a single region outage
+In this case my expectation would be it depends on how often the backups are set to go off. If the automated backups are set to every 2 hours then the minimum RPO would be 2 hours.
